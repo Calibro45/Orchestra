@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Orchestra
 {
-    public class Orchestra
+    public class Orchestra : List<StrumentoMusicale>
     {
+        public Orchestra() { }
+
+        
     }
 }

@@ -21,13 +21,11 @@ namespace Orchestra
             var strumento = GetType().Name;
             var message = $"Il {strumento}, sta suonando la scala di {Note.Note}: ";
 
-            Tab.ForEach(x => 
+            Tab.ForEach(x =>
                 message += x.Note + " "
             );
 
             return message;
         }
-
-        
     }
 }

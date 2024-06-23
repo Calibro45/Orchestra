@@ -8,7 +8,7 @@ namespace Orchestra
         {
             Console.ForegroundColor = ConsoleColor.Red;
 
-            var listaStrumenti = new List<StrumentoMusicale>
+            var listaStrumenti = new Orchestra()
             {
                 new Piano(new Nota("Do")),
                 new Chitarra(new Nota("La")),
@@ -19,12 +19,6 @@ namespace Orchestra
             {
                 Console.WriteLine(strumento.Play() + "\n");
             }
-
-
-
-
-
-
 
         }
     }

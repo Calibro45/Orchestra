@@ -26,18 +26,21 @@ namespace Orchestra
             var tablatura = new Pentagramma();
 
             var notaTrovata = listaNote.Find(x => x.Note.ToLower() == nota.Note.ToLower());
-            var indexOfToned = listaNote.IndexOf(notaTrovata);
 
-            for (int i = indexOfToned; i < listaNote.Count(); i++)
+            if (notaTrovata != null)
             {
-                var note = listaNote[i];
-                tablatura.Add(note);
-            }
+                var indexOfToned = listaNote.IndexOf(notaTrovata);
+                for (int i = indexOfToned; i < listaNote.Count(); i++)
+                {
+                    var note = listaNote[i];
+                    tablatura.Add(note);
+                }
 
-            for (int i = 0; i < indexOfToned; i++)
-            {
-                var note = listaNote[i];
-                tablatura.Add(note);
+                for (int i = 0; i < indexOfToned; i++)
+                {
+                    var note = listaNote[i];
+                    tablatura.Add(note);
+                }
             }
 
             return tablatura;
