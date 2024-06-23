@@ -15,17 +15,5 @@ namespace Orchestra
             Note = nota;
             Tab = new Pentagramma().Tablatura(Note);
         }
-
-        public string Play()
-        {
-            var strumento = GetType().Name;
-            var message = $"Il {strumento}, sta suonando la scala di {Note.Note}: ";
-
-            Tab.ForEach(x =>
-                message += x.Note + " "
-            );
-
-            return message;
-        }
     }
 }

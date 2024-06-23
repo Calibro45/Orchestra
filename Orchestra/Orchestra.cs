@@ -10,6 +10,17 @@ namespace Orchestra
     {
         public Orchestra() { }
 
-        
+        public string Sinfony(StrumentoMusicale s, Pentagramma tab)
+        {
+            var strumento = s.GetType().Name;
+            var message = $"{strumento}, sta suonando la scala di {s.Note.Note}:\n";
+
+            tab.ForEach(t =>
+                message += t.Note + " "
+            );
+
+            return message;
+        }
+
     }
 }

@@ -15,11 +15,11 @@ namespace Orchestra
                 new Violino(new Nota("Sol"))
             };
 
-            foreach (var strumento in listaStrumenti)
+            foreach (var item in listaStrumenti)
             {
-                Console.WriteLine(strumento.Play() + "\n");
+                var message = listaStrumenti.Sinfony(item, item.Tab);
+                Console.WriteLine(message);
             }
-
         }
     }
 }
